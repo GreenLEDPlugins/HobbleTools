@@ -8,11 +8,13 @@ public final class Hobbletools extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        // Plugin startup logic with listener👂
         PluginManager pm = this.getServer().getPluginManager();
-        pm.registerEvents(new hobbler(this),this);
-        this.getServer().getPluginManager().registerEvents(this,this);
+        pm.registerEvents(new hobbler(this), this);
+        this.getServer().getPluginManager().registerEvents(this, this);
         this.getCommand("hobble").setExecutor(new hobbler(this));
+        this.saveDefaultConfig();
+        registerCmds();
 
 
     }
@@ -21,4 +23,9 @@ public final class Hobbletools extends JavaPlugin implements Listener {
     public void onDisable() {
         // Plugin shutdown logic
     }
+    //All the commands in this plugin :)
+    public void registerCmds() {
+        this.getCommand("hobble").setExecutor(new hobbler(this));
+    }
+
 }

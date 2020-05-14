@@ -1,7 +1,7 @@
 #Use this to modify slowness (0=1, 1=2, etc.)
 amplifier-value: 0
 #Use this to modify amount of uses
-uses: 2 #only supports 1 for now moon2PH
+uses: 5 #only supports 1 for now moon2PH
 #Changes the item given (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
 # [WIP] item: Material.SHEARS
 #Change messages

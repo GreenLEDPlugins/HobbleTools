@@ -1,9 +1,12 @@
 name: HobbleTools
+author: Green L.E.D.
 version: ${project.version}
 main: com.greenled.hobbler.hobbletools.Hobbletools
 api-version: 1.13
+prefix: HobbleTool
 commands:
   hobble:
     description: You feel as though you lost your toes moon2Suffer
     permission: hobble.use
+    permission-message: You feel you are not worthy to use /<permission>
     usage: "Usage: /<command>"
