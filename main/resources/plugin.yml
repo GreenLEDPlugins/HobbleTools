@@ -1,0 +1,9 @@
+name: HobbleTools
+version: ${project.version}
+main: com.greenled.hobbler.hobbletools.Hobbletools
+api-version: 1.13
+commands:
+  hobble:
+    description: You feel as though you lost your toes moon2Suffer
+    permission: hobble.use
+    usage: "Usage: /<command>"

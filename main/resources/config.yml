@@ -1,0 +1,29 @@
+#Use this to modify slowness (0=1, 1=2, etc.)
+amplifier-value: 0
+#Use this to modify amount of uses
+uses: 2 #only supports 1 for now moon2PH
+#Changes the item given (https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
+# [WIP] item: Material.SHEARS
+#Change messages
+messages:
+  #When console uses command
+  consolerun: "&4 The console cannot run this command"
+  #When user lacks permissions
+  noperms: "&4 You lack the required permissions to do this!"
+  #When user receives item
+  giveitem: "&a You feel as though you're ready to hobble..."
+  #What user sees as confirmation
+  confirmation: "&4 You feel as though successfully hobbled someone!"
+  #Show to user after they've been hobbled
+  hobblesuccess: "&4 You feel as though you've been hobbled!"
+  #Throws when error occurs (deprecated)
+  error: "&4 An unknown error has occurred. See Console for information"
+#The words on the tool
+lore:
+  #Name of the item
+  itemname: "&4 Toe Hobbler"
+  #Works in an array. Uses 3 lines. Change how you wish!
+  line1: " "
+  line2: "&6 Click a player to hobble their toes"
+  line3: " "
+
