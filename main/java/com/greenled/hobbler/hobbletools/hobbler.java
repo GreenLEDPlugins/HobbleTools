@@ -3,6 +3,7 @@ package com.greenled.hobbler.hobbletools;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -58,12 +59,14 @@ public class hobbler implements Listener, CommandExecutor {
                 ((Damageable) itemMeta).setDamage(getHobbleDevice().getType().getMaxDurability() / Plugin.getConfig().getInt("uses"));
                 if (((Damageable) itemMeta).getDamage() >= getHobbleDevice().getType().getMaxDurability()) {
                     p.getInventory().removeItem(getHobbleDevice());
+                    p.playSound(p.getLocation(), Sound.ENTITY_ITEM_BREAK,1,0);
                 }
             }
             inHand.setItemMeta(itemMeta);
             //p.getInventory().removeItem(getHobbleDevice());
             String name = e.getRightClicked().getName();
             Player freeze = Bukkit.getPlayerExact(name);
+            p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 1, 0);
             freeze.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 2147483647, Plugin.getConfig().getInt("amplifier-value")));
             freeze.sendMessage(ChatColor.translateAlternateColorCodes('&', Plugin.getConfig().getString("messages.hobblesuccess")));
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', Plugin.getConfig().getString("messages.confirmation")));
